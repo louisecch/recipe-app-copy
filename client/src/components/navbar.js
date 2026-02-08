@@ -23,65 +23,66 @@ export const Navbar = () => {
 
   return (
     <div className="navbar">
-      <img
-        id="site-logo"
-        src={require("../images/siteLogo.png")}
-        alt="Site Logo"
-      />
-
-      <div
-        onClick={() => {
-          setIsNavExpanded(!isNavExpanded);
-        }}
-      >
-        {" "}
-        <div className="hamburger">
-          <Hamburger toggled={isOpen} toggle={setOpen} />
+      <div className="navbar-inner">
+        <img
+          id="site-logo"
+          src={require("../images/siteLogo.png")}
+          alt="Site Logo"
+        />
+        <div
+          onClick={() => {
+            setIsNavExpanded(!isNavExpanded);
+          }}
+        >
+          {" "}
+          <div className="hamburger">
+            <Hamburger toggled={isOpen} toggle={setOpen} />
+          </div>
         </div>
-      </div>
 
-      <div
-        className={
-          isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
-        }
-      >
-        <ul className="navbar-ul">
-          <li>
-            <Link to="/" onClick={closeMobileMenu}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/create-recipe" onClick={closeMobileMenu}>
-              Create a Recipe
-            </Link>
-          </li>
-
-          {!cookies.access_token ? (
+        <div
+          className={
+            isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
+          }
+        >
+          <ul className="navbar-ul">
             <li>
-              <Link to="/auth" onClick={closeMobileMenu}>
-                Login/Register
+              <Link to="/" onClick={closeMobileMenu}>
+                Home
               </Link>
             </li>
-          ) : (
-            // fragments: so can use element without a parent
-            <>
+            <li>
+              <Link to="/create-recipe" onClick={closeMobileMenu}>
+                Create a Recipe
+              </Link>
+            </li>
+
+            {!cookies.access_token ? (
               <li>
-                <Link to="/saved-recipes" onClick={closeMobileMenu}>
-                  Saved Recipes
+                <Link to="/auth" onClick={closeMobileMenu}>
+                  Login/Register
                 </Link>
               </li>
-              <li>
-                <Link onClick={closeMobileMenu}>
-                  <button onClick={logout} className="logout-btn">
-                    {" "}
-                    Logout{" "}
-                  </button>
-                </Link>
-              </li>
-            </>
-          )}
-        </ul>
+            ) : (
+              // fragments: so can use element without a parent
+              <>
+                <li>
+                  <Link to="/saved-recipes" onClick={closeMobileMenu}>
+                    Saved Recipes
+                  </Link>
+                </li>
+                <li>
+                  <Link onClick={closeMobileMenu}>
+                    <button onClick={logout} className="logout-btn">
+                      {" "}
+                      Logout{" "}
+                    </button>
+                  </Link>
+                </li>
+              </>
+            )}
+          </ul>
+        </div>
       </div>
     </div>
   );
