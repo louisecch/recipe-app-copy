@@ -11,13 +11,13 @@ export const CreateRecipe = () => {
   const [recipe, setRecipe] = useState({
     name: "",
     description: "",
-    ingredients: [], // array
+    ingredients: [],
     instructions: "",
     imageUrl: "",
     cookingTime: 0,
     userOwner: userID,
   });
-  const [newIngredientIndex, setNewIngredientIndex] = useState(null); // New state to track the index of the newly added ingredient
+  const [newIngredientIndex, setNewIngredientIndex] = useState(null);
 
   const navigate = useNavigate();
 
@@ -28,7 +28,7 @@ export const CreateRecipe = () => {
 
   const handleIngredientChange = (event, index) => {
     const { value } = event.target;
-    const ingredients = [...recipe.ingredients]; // a replica of current ingredients list
+    const ingredients = [...recipe.ingredients];
     ingredients[index] = value;
     setRecipe({ ...recipe, ingredients });
   };
@@ -36,13 +36,12 @@ export const CreateRecipe = () => {
   const handleAddIngredient = () => {
     const ingredients = [...recipe.ingredients, ""];
     setRecipe({ ...recipe, ingredients });
-    // setting the recipe object to be the same as before, whatever came after the comma will have changes, i.e. change to the ingredients field
-    setNewIngredientIndex(ingredients.length - 1); // Set the index of the new ingredient to apply animation
-    setTimeout(() => setNewIngredientIndex(null), 500); // Clear the animation class after 500ms
+    setNewIngredientIndex(ingredients.length - 1);
+    setTimeout(() => setNewIngredientIndex(null), 500);
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault(); // prevent page refreshing every time I hit submit button
+    event.preventDefault();
 
     try {
       await axios.post(
@@ -54,7 +53,7 @@ export const CreateRecipe = () => {
       );
 
       alert("Recipe Created");
-      navigate("/"); // redirect to home page
+      navigate("/");
     } catch (error) {
       console.error(error);
     }
@@ -88,7 +87,7 @@ export const CreateRecipe = () => {
             name="ingredients"
             value={ingredient}
             onChange={(event) => handleIngredientChange(event, index)}
-            className={newIngredientIndex === index ? "pop-jiggle" : ""} // Apply animation class if the index matches
+            className={newIngredientIndex === index ? "pop-jiggle" : ""}
           />
         ))}
         <button

@@ -9,7 +9,6 @@ export const Navbar = () => {
 
   const closeMobileMenu = () => setIsNavExpanded(false);
 
-  // hamburger
   const [isOpen, setOpen] = useState(false);
 
   const [cookies, setCookies] = useCookies(["access_token"]);
@@ -64,7 +63,6 @@ export const Navbar = () => {
                 </Link>
               </li>
             ) : (
-              // fragments: so can use element without a parent
               <>
                 <li>
                   <Link to="/saved-recipes" onClick={closeMobileMenu}>

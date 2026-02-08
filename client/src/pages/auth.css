@@ -76,7 +76,6 @@
   background-color: #c95152 !important;
   display: flex !important;
   flex-direction: row !important;
-  /* flex: 1; */
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -143,7 +142,6 @@ form {
 }
 
 input {
-  /*margin-top: 8px;*/
   height: 30px;
   border-radius: 38px;
   -webkit-border-radius: 38px;
