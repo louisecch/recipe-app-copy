@@ -1,7 +1,7 @@
 # 🍽️ Recipe App
 
 A full-stack web application for discovering, and creating recipes. 🤩 
-Sign up today and start your culinary journey with us!
+<br> Sign up today and start your culinary journey with us!
 
 ---
 
