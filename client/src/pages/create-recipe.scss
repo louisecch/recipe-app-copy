@@ -1,31 +1,3 @@
-@media screen and (max-width: 480px) {
-  .create-recipe {
-    width: calc(100vw - 40px);
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
-  label {
-    font-size: 0.9rem;
-  }
-
-  body {
-    overflow-x: hidden;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  label {
-    font-size: 0.85rem !important;
-  }
-
-  h2 {
-    font-size: 1.28rem !important;
-  }
-}
-
 :root {
   --link-translate-x: 3rem;
 }
@@ -332,5 +304,33 @@ textarea:focus {
 @media screen and (max-width: 768px) {
   .create-recipe {
     width: 510px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .create-recipe {
+    width: calc(100vw - 40px);
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  label {
+    font-size: 0.85rem;
+  }
+
+  h2 {
+    font-size: 1.28rem;
   }
 }

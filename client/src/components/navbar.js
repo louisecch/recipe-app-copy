@@ -23,11 +23,6 @@ export const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-inner">
-        <img
-          id="site-logo"
-          src={require("../images/siteLogo.png")}
-          alt="Site Logo"
-        />
         <div
           onClick={() => {
             setIsNavExpanded(!isNavExpanded);
