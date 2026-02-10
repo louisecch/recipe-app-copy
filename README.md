@@ -3,6 +3,8 @@
 A full-stack web application for discovering, and creating recipes. 🤩 
 <br> Sign up today and start your culinary journey with us!
 
+(Because I'm really cheap and using Render free tier for my backend, the server will be asleep and take some time to load.)
+
 ---
 
 ## Project Structure
