@@ -159,9 +159,18 @@ p {
 
   .recipe-instructions {
     font-size: 1rem;
+    max-width: 100%;
+    word-wrap: break-word;
   }
 
   .recipe-ingredients {
     font-size: 1rem;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  p {
+    max-width: 100%;
+    word-wrap: break-word;
   }
 }
