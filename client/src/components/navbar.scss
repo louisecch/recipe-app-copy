@@ -126,19 +126,6 @@ a {
   .navbar-inner {
     max-width: 550px;
   }
-}
-
-@media screen and (max-width: 420px) {
-  .navbar-inner {
-    max-width: 80vw;
-    padding: 0 10vw;
-
-    .hamburger {
-      .hamburger-react div {
-        left: 14px;
-      }
-    }
-  }
 
   .hamburger {
     display: block;
@@ -146,19 +133,12 @@ a {
     margin-top: 0;
     margin-left: 0;
     position: absolute;
-    right: 10vw;
+    right: calc((100vw - 550px) / 2);
     top: 1rem;
   }
 
   .navbar-ul {
     margin-left: 0rem;
-  }
-
-  .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
   }
 
   .navigation-menu ul {
@@ -197,5 +177,21 @@ a {
 
   .logout-btn {
     font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-inner {
+    max-width: calc(100vw - 40px);
+  }
+
+  .hamburger {
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .navbar-inner {
+    max-width: 80vw;
   }
 }
