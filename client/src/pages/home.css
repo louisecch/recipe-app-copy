@@ -161,16 +161,31 @@ p {
     font-size: 1rem;
     max-width: 100%;
     word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   .recipe-ingredients {
     font-size: 1rem;
     max-width: 100%;
     word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   p {
     max-width: 100%;
     word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+    white-space: pre-wrap;
+  }
+
+  .recipe-container {
+    max-width: 80vw;
+    overflow-x: hidden;
   }
 }
